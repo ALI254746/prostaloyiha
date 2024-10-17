@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>wschool darslari takrollash</title>
+
+    </head>
+    <body>
+        <p class="intro">salom</p>
+        <p class="intro">salom</p>
+        <p class="intro">salom</p>
+        <h1 id="h4">salom</h1>
+        <h1 id="h5">salom</h1>
+        <p id="demo">salom</p>
+        <img id='image'src="natural2.jpg" alt="bu yerda rasim bor"><br>
+        <script>
+        //     //rasimni id si orqali javascript fayilidan turib o'zgartirish
+        //    document.getElementById('image').src="nature.jpg";
+        //    //vaqt dynamic
+        //    document.getElementById("h1").innerHTML='Date:' + Date();
+        //    //html dan tashqarida to'g'ridan -to'g'ri yozish
+        //    document.write(Date())
+           // CSS selektoriga (id, sinf nomlari, turlari, atributlar,
+           //querySelectorAll() usulidan foydalaning.
+           const x=document.querySelectorAll("p.intro");
+           dociment.getElementById('demo').innerHTML="birinchi heading (index 0) bilan class='intro' :"+x[0].innerHTML;
+           document.getElementsByTagName('p')[0].innerHTML='asalomu alekum';
+        </script>
+        <p>salom</p>
+    </body>
+</html>

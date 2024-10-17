@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Animation</title>
+    <style>
+    #animatedText{
+        width:100%;
+        display:inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: scroll 10s linear infinite;
+    }
+    @keyframes scroll{
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="animatedText">salom</div>
+    <button onclick="animate_string('animatedText')">Start Animation</button>
+
+    <script>
+        function animate_string(id) {
+            var element = document.getElementById(id);
+            var textNode = element.childNodes[0];
+            var text = textNode.data;
+
+            setInterval(function () {
+                text = text[text.length - 1] + text.substring(0, text.length - 1);
+                textNode.data = text;
+            }, 100);
+        }
+    </script>
+</body>
+</html>

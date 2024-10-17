@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uchburchak</title>
+    </head>
+    <body>
+        <input type="number" id="A"  placeholder="A tomonni kiriting:">
+         <input type="number" id="B" placeholder="B tomonni kiriting:">
+        <input type="number" id ='C' placeholder="C tomonni kiriting:">
+        <button onclick="calculate()">HISOBLASH</button>
+         <h1 id="result"></h1>
+         <script>
+            //misol-3 uchburchakning yuzasini hisoblaydi
+
+function calculate(){
+    const  numberA=parseFloat(document.getElementById("A").value);
+    const numberB=parseFloat(document.getElementById("B").value);
+    const numberC=parseFloat(document.getElementById("C").value);
+    const P=(numberA+numberB+numberC)/2;
+    const S=Math.sqrt(P*(P-numberA)*(P-numberB)*(P-numberC));
+    document.getElementById("result").innerHTML=`son A:${numberA}<br> son B:${numberB} <br> son C:${numberC}<br>  perimetiri:${P} <br> yuzasi S:${S}`;
+}
+         </script>
+    </body>
+</html>
+

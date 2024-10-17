@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- so'zni teskarisiga ylantiradi -->
+<input type="text" id="text" placeholder="so'zni yozing" ><br>
+<button onclick="undertext()">so'zni teskari qilish</button><br>
+<output id="outputtext"> so'z chiqadi </output><br>
+<script>
+    
+//misol so'zni teskarisiga yozish
+
+function undertext(){
+    const text=document.getElementById('text').value;
+    const reverseText=text.split('').reverse().join('');
+    document.getElementById('outputtext').value=reverseText;
+
+}
+</script>
+    </body>
+</html>

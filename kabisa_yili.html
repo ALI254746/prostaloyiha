@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        #button{
+            background-image: linear-gradient(to top left,red,black);
+            /* border-width: 50px; */
+            font-size: larger;
+        }
+        #javob{
+            border-style: dashed;
+        }
+      </style>
+    </head>
+    <body>
+              <!-- kabisa yilini aniqlash uchun bir vaqtning o'zida  -->
+              <input type="number" id="yil" placeholder="kabisa yilini kiriting"><br>
+              <button  id="button" onclick="kabisayili()">TUGMA</button><br>
+              <output id="javob" placeholder="javob chiqadi">javob:</output><br>
+        <script>
+       function kabisayili(){
+       const y=parseInt(document.getElementById('yil').value);
+        if(y%4==0 && y%100 !==0){
+           document.getElementById('javob').value=`siz kiritgan yil kabisa yili ${y}`;
+}       else{
+           document.getElementById('javob').value=`siz kiritgan yil kabisa yili emas ${y}`;
+}
+}
+        </script>
+    </body>
+</html>
